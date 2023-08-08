@@ -46,4 +46,4 @@ jobs:
             docker rm $(docker ps -a -q --filter ancestor=${{ vars.IMAGE_NAME }}:latest)
             docker rmi ${{ vars.IMAGE_NAME }}:latest
             docker pull ${{ vars.IMAGE_NAME }}:latest
-            docker run -d --restart=always -p ${{ vars.PORT }}:${{ vars.PORT }} ${{ vars.IMAGE_NAME }}:latest
+            docker run -d --restart=always -p ${{ vars.PORT }} ${{ vars.IMAGE_NAME }}:latest

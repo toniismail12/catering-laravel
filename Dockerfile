@@ -30,7 +30,7 @@ RUN composer install --no-interaction
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 # Expose port 9000 and start the PHP-FPM server
-EXPOSE 5007
+EXPOSE 9000
 CMD ["php-fpm"]
 
 # Optionally, you might want to customize additional settings, such as:
